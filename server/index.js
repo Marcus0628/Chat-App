@@ -8,12 +8,11 @@ const { app, server } = require('./socket/index');
 
 //const app = express();
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8081;
 
 app.use(
   cors({
-    origin: '*',
-    //process.env.FRONTEND_URL
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );
